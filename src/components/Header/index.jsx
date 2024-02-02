@@ -1,52 +1,100 @@
-//import AppBar from '@mui/material/AppBar';
-//import Box from '@mui/material/Box';
-//import Toolbar from '@mui/material/Toolbar';
-//import Typography from '@mui/material/Typography';
-//import Button from '@mui/material/Button';
-//import IconButton from '@mui/material/IconButton';
-//import MenuIcon from '@mui/icons-material/Menu';
 
-import { Menu, MenuItem } from "@mui/material";
-import "./styles.css";
+//import { Stack, Button, List, ListItem, Menu, MenuItem } from "@mui/material";
+//import { Link } from "react-router-dom";
+//import { useState } from "react";
+
+import { AppBar, Toolbar, Typography } from "@mui/material";
+
+/*const CustomButton = ({ to, children }) => {
+  return (
+    <Button
+      to={to}
+      sx={{
+        fontFamily: "Lato",
+        color: "#000",
+        fontSize: "1.1rem",
+        fontWeight: "600",
+      }}
+      component={Link}
+    >
+      {children}
+    </Button>
+  );
+};
+*/
+/*
+const Header = () => {
+  const [menuAnchor, setMenuAnchor] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setMenuAnchor(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setMenuAnchor(null);
+  };
+
+  return (
+    <Stack
+      sx={{
+        padding: "10px",
+        position: "fixed",
+        width: "100%",
+        top: 0,
+        backgroundColor: "#dd599d3a",
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+      }}
+    >
+      <List sx={{ display: 'flex', gap: '10px', marginLeft: 'auto' }}>
+        <ListItem>
+          <CustomButton to="/">Home</CustomButton>
+        </ListItem>
+        <ListItem>
+          <CustomButton to="/sobre">Sobre</CustomButton>
+        </ListItem>
+        <ListItem>
+          <Button
+            sx={{
+              fontFamily: "Lato",
+              color: "#000",
+              fontSize: "1.1rem",
+              fontWeight: "600",
+            }}
+            onClick={handleMenuOpen}
+          >
+            Projetos
+          </Button>
+          <Menu
+            anchorEl={menuAnchor}
+            open={Boolean(menuAnchor)}
+            onClose={handleMenuClose}
+          >
+            <MenuItem component={Link} to="/projetos/projeto1" onClick={handleMenuClose}>
+              Projeto 1
+            </MenuItem>
+            <MenuItem component={Link} to="/projetos/projeto2" onClick={handleMenuClose}>
+              Projeto 2
+            </MenuItem>
+            
+          </Menu>
+        </ListItem>
+      </List>
+    </Stack>
+  );
+};
+*/
 
 const Header = () => {
   return (
-    <header>
-      <Menu>
-        <MenuItem>
-          Sobre
-        </MenuItem>
-      </Menu>
-    </header>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6">Meu Site</Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
 export default Header;
 
-/*
-export default function ButtonAppBar() {
-  return (
-    <Box sx={{ flexGrow: 1,
-      backgroundImage: linearGradient(90deg, #98df8d, #e978bf)
-    }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-}
-*/
