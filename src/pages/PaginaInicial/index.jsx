@@ -1,19 +1,48 @@
-import { Container, Typography, Button } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+
 
 const PaginaInicial = () => {
 
   return (
-    <Container>
-      <Typography variant="h4" sx={{ marginTop: 4 }}>
-        Bem-vindo à Página Principal
-      </Typography>
-      <Typography variant="body1" sx={{ marginTop: 2 }}>
-        Este é o conteúdo principal do seu site.
-      </Typography>
-      <Button variant="contained" color="primary" sx={{ marginTop: 2 }}>
-        Clique em Mim
-      </Button>
-    </Container>
+    <Stack direction="column">
+      <section>
+        <Box sx={{
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "#DD599D",
+          height: "500px",
+          padding: "20px",
+          borderBottom: "1px solid #000"
+        }}>
+          <h2>Roberta Meyrelles</h2>
+
+        </Box>
+      </section>
+      <section>
+        <Box sx={{
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "#A38ABB",
+          borderBottom: "1px solid #000",
+          height: "500px",
+
+        }}>
+          <h2>Roberta França</h2>
+        </Box>
+      </section>
+      <section>
+        <Box sx={{
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "#8dbd81",
+          borderBottom: "1px solid #000",
+          height: "500px",
+
+        }}>
+          <h2>Roberta França</h2>
+        </Box>
+      </section>
+    </Stack>
   );
 
 };

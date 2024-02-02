@@ -1,26 +1,9 @@
 
-//import { Stack, Button, List, ListItem, Menu, MenuItem } from "@mui/material";
-//import { Link } from "react-router-dom";
+import { Button, List, ListItem, Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 //import { useState } from "react";
 
-import { AppBar, Toolbar, Typography } from "@mui/material";
-
-/*const CustomButton = ({ to, children }) => {
-  return (
-    <Button
-      to={to}
-      sx={{
-        fontFamily: "Lato",
-        color: "#000",
-        fontSize: "1.1rem",
-        fontWeight: "600",
-      }}
-      component={Link}
-    >
-      {children}
-    </Button>
-  );
-};
+/*
 */
 /*
 const Header = () => {
@@ -86,13 +69,42 @@ const Header = () => {
 };
 */
 
+const CustomButton = ({ to, children }) => {
+  return (
+    <Button
+      to={to}
+      sx={{
+        fontFamily: "Lato",
+        color: "#000",
+        fontSize: "1.1rem",
+        fontWeight: "600",
+      }}
+      component={Link}
+    >
+      {children}
+    </Button>
+  );
+};
+
 const Header = () => {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">Meu Site</Typography>
-      </Toolbar>
-    </AppBar>
+    <nav>
+      <Stack sx={{
+        backgroundColor: "#dd599d56",
+      }}>
+        <List sx={{ display: 'flex', gap: '10px', marginLeft: 'auto' }}>
+          <ListItem>
+            <CustomButton to="/">Home</CustomButton>
+          </ListItem>
+          <ListItem>
+            <CustomButton to="/sobre">Sobre</CustomButton>
+          </ListItem>
+          <ListItem>
+            <CustomButton to="/projetos">Projetos</CustomButton>
+          </ListItem>
+        </List>
+      </Stack>
+    </nav>
   );
 };
 
