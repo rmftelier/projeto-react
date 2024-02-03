@@ -67,7 +67,6 @@ const Footer = () => {
         backgroundColor: "#6278f7",
         textAlign: "center",
         bottom: 0,
-        position: "fixed",
         width: "100%",
       }}>
         <RedesSociais />
