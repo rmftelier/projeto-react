@@ -41,6 +41,7 @@ const theme = createTheme({
       fontFamily: "Lato",
       fontWeight: "500",
       marginBottom: "2rem",
+      marginTop: "1rem"
     },
     body: {
       fontSize: "1.45rem",

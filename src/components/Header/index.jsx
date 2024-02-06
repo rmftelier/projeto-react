@@ -38,7 +38,7 @@ const Header = () => {
           Home
         </CustomButton>
         <CustomButton>
-          Sobre mim
+          Projetos
         </CustomButton>
         <Button
           color="inherit"
@@ -48,10 +48,12 @@ const Header = () => {
             fontSize: "1.5rem",
             fontWeight: "600",
             textTransform: 'none',
-            textShadow: ""
+            textShadow: "#000",
+            color: "#991667",
+            textDecoration: "fixed"
           }}
         >
-          Projetos
+          Sobre
         </Button>
         <Menu
           anchorEl={anchorEl}
@@ -65,17 +67,20 @@ const Header = () => {
             vertical: 'top',
             horizontal: 'right',
           }}
-          sx={{
-
-            borderRadius: 0, // Configura a borda para tornar o menu quadrado
-          }
-          }
+          MenuListProps={{
+            sx: {
+              borderRadius: "0",
+              backgroundColor: 'rgba(228, 140, 209, 0.503)',
+              boxShadow: "0",
+              zIndex: 1, // Defina a cor de fundo desejada aqui
+            },
+          }}
         >
-          <MenuItem onClick={handleClose}>
-            <CustomButton to="/projeto1">Projeto 1</CustomButton>
+          <MenuItem onClick={handleClose} >
+            <CustomButton to="/projeto1">Sobre Mim</CustomButton>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <CustomButton to="/projeto2">Projeto 2</CustomButton>
+            <CustomButton to="/projeto2">Sobre PretaLab</CustomButton>
           </MenuItem>
           {/* Adicione mais projetos conforme necessário */}
         </Menu>
@@ -86,36 +91,5 @@ const Header = () => {
 
 export default Header;
 
-/*  return (
-    <AppBar position="static" sx={{ boxShadow: "0", backgroundColor: "rgba(221, 89, 157, 0.17)", display: 'flex', marginLeft: "auto" }}>
-      <Toolbar sx={{ marginLeft: "auto", gap: "20px", padding: "15px" }}>
-        <CustomButton color="inherit" component={RouterLink} to="/">
-          Home
-        </CustomButton>
-        <CustomButton>
-          Sobre mim
-        </CustomButton>
-        <CustomButton color="inherit" onClick={handleClick}>
-          Projetos
-        </CustomButton>
-        <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem onClick={handleClose}>
-            <CustomButton to="/projeto1">Projeto 1</CustomButton>
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <CustomButton to="/projeto2">Projeto 2</CustomButton>
-          </MenuItem>
-          {/* Adicione mais projetos conforme necessário }
-        </Menu>
-      </Toolbar>
-    </AppBar>
-  );
-};
-
-*/
 
 
