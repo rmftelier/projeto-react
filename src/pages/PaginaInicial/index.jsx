@@ -1,4 +1,6 @@
 import { Avatar, Box, Stack, Typography, List, ListItem } from "@mui/material";
+import { Link } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Intro = () => {
   return (
@@ -9,7 +11,6 @@ const Intro = () => {
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "rgba(221, 89, 157, 0.17)",
-          height: "500px",
           padding: "20px",
           borderBottom: "1px solid #000",
           paddingBottom: "3rem",
@@ -24,45 +25,32 @@ const Intro = () => {
             maxWidth: "95%",
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Playfair Display",
-              fontSize: "6rem",
-              position: "relative",
-              maxWidth: "10ch",
-              lineHeight: "110%",
-              fontWeight: "900",
-              textShadow: "1px 1px 0px #000000",
-              marginBottom: "2rem",
-            }}
-          >
+          <Typography variant="h1">
             Roberta Meyrelles
           </Typography>
+
+          <Typography variant="h4">
+            Bacharelanda em Ciência da Computação e
+            Desenvolvedora Front-End.
+          </Typography>
+
           <Typography
             sx={{
-              fontSize: "1.75rem",
-              maxWidth: "42rem",
-              fontFamily: "Lato",
-              fontWeight: "500",
-              marginBottom: "2rem",
+              '& a': {
+                color: 'inherit',
+                borderBottom: '2px solid transparent',
+                transition: 'border-bottom 0.3s ease-in-out',
+                '&:hover': {
+                  borderBottom: '2px solid #000',
+                },
+              },
             }}
-            variant="h2"
+            variant="h4"
           >
-            I'm an experienced independent developer, designer and educator.
-            I specialize in building accessible and inclusive products, and
-            have a particular focus on dataviz accessibility.
+            <Link href="/#sobreMim">Sobre mim</Link> / <Link component={RouterLink} to="/sobrePretaLab">Sobre PretaLab</Link>
           </Typography>
-          <Typography
-            sx={{
-              fontSize: "1.75rem",
-              maxWidth: "42rem",
-              fontFamily: "Lato",
-              fontWeight: "500",
-            }}
-            variant="h2"
-          >
-            Sobre mim / Sobre PretaLab
-          </Typography>
+
+
 
         </Stack>
         <Avatar
@@ -79,14 +67,13 @@ const Intro = () => {
 
 const SobreMim = () => {
   return (
-    <section>
+    <section id="sobreMim">
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "rgba(163, 138, 187, 0.37)",
-          height: "500px",
           padding: "20px",
           paddingBottom: "3rem",
           paddingLeft: "2rem",
@@ -100,47 +87,33 @@ const SobreMim = () => {
             maxWidth: "95%",
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Playfair Display",
-              fontSize: "3.5rem",
-              position: "relative",
-              maxWidth: "10ch",
-              lineHeight: "110%",
-              fontWeight: "900",
-              textShadow: "1px 1px 0px #000000",
-              marginBottom: "2rem",
-            }}
-          >
+          <Typography variant="h2">
             Sobre Mim
           </Typography>
-          <Typography
-            sx={{
-              fontSize: "1.75rem",
-              fontFamily: "Lato",
-              fontWeight: "500",
-              marginBottom: "2rem",
-            }}
-            variant="h2"
-          >
-            I'm an experienced independent developer, designer and educator.
-            I specialize in building accessible and inclusive products, and
-            have a particular focus on dataviz accessibility.
+          <Typography variant="body">
+            Olá! Eu sou Roberta Meyrelles França (pronomes: ela/dela), e
+            atualmente sou Bacharelanda em Ciência da Computação pela Universidade
+            Vila Velha (UVV) e Estagiária em Desenvolvimento de Sistemas no
+            Ministério Público Do Estado Do Espírito Santo.
           </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Playfair Display",
-              fontSize: "2.2rem",
-              position: "relative",
-              maxWidth: "10ch",
-              lineHeight: "110%",
-              fontWeight: "900",
-              marginBottom: "2rem",
-            }}
-          >
-            Tecnologias
+          <Typography variant="body">
+            Particularmente sou interessada em Desenvolvimento Front-End, área
+            que estudo e pratico no estágio e paralelamente aos estudos da graduação.
+            Principalmente sobre acessibilidade na web e a construção de protótipos e websites user-friendly.
+            E tecnologias e abordagens que tratem sobre tecnologia ética, questões raciais e diversidade na área
+            tecnológica.
           </Typography>
+          <Typography variant="body">
+            Durante o estágio tenho a oportunidade de exercer as seguintes
+            atividades:
+            <List>
+              <ListItem>• Desenvolvimento de protótipos utilizando Figma e validação junto aos usuários;</ListItem>
+              <ListItem>• Implementação e manutenção de novas funcionalidades com React.js, Chakra UI para a criação
+                das interfaces gráficas e C# para a integração com o banco de dados. </ListItem>
 
+            </List>
+          </Typography>
+          <Typography variant="h3"> Tecnologias </Typography>
           <ListaTecnologias />
         </Stack>
       </Box>
@@ -163,6 +136,7 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600"
           }}
         >
           HTML
@@ -179,6 +153,7 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600"
           }}
         >
           CSS
@@ -195,6 +170,7 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600"
           }}
         >
           JavaScript
@@ -211,6 +187,8 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600",
+
           }}
         >
           React
@@ -227,6 +205,7 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600"
           }}
         >
           Chakra UI
@@ -243,6 +222,7 @@ const ListaTecnologias = () => {
             alignItems: "center",
             justifyContent: "center",
             border: "1px solid #000",
+            fontWeight: "600"
           }}
         >
           Material UI

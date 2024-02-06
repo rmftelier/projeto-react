@@ -64,11 +64,13 @@ const Footer = () => {
   return (
     <footer>
       <Box sx={{
-        backgroundColor: "#6278f7",
+
         textAlign: "center",
         bottom: 0,
         width: "100%",
-      }}>
+      }}
+      
+      >
         <RedesSociais />
         <Creditos />
       </Box>
