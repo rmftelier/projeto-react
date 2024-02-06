@@ -1,7 +1,6 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 import { Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import SobreMim from "../SobreMim";
 
 const Intro = () => {
   return (
@@ -18,6 +17,7 @@ const Intro = () => {
           paddingBottom: "3rem",
           paddingLeft: "2rem",
           paddingTop: "2rem",
+          height: "640px"
         }}
       >
 
@@ -42,7 +42,7 @@ const Intro = () => {
             }}
             variant="h4"
           >
-            <Link href="/#sobreMim">Sobre mim</Link> / <Link component={RouterLink} to="/sobrePretaLab">Sobre PretaLab</Link>
+            <Link component={RouterLink} to="/sobreMim">Sobre mim</Link> / <Link component={RouterLink} to="/sobrePretaLab">Sobre PretaLab</Link>
           </Typography>
         </Stack>
         <Avatar
@@ -69,7 +69,7 @@ const PaginaInicial = () => {
         }}
       >
         <Intro />
-        <SobreMim />
+
       </Box>
     </Stack>
   );

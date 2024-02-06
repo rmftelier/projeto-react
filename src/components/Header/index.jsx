@@ -37,7 +37,7 @@ const Header = () => {
         <CustomButton color="inherit" component={RouterLink} to="/">
           Home
         </CustomButton>
-        <CustomButton>
+        <CustomButton to="/projetos">
           Projetos
         </CustomButton>
         <Button
@@ -70,17 +70,17 @@ const Header = () => {
           MenuListProps={{
             sx: {
               borderRadius: "0",
-              backgroundColor: 'rgba(228, 140, 209, 0.503)',
+              backgroundColor: 'rgba(163, 138, 187, 0.37)',
               boxShadow: "0",
               zIndex: 1, // Defina a cor de fundo desejada aqui
             },
           }}
         >
           <MenuItem onClick={handleClose} >
-            <CustomButton to="/projeto1">Sobre Mim</CustomButton>
+            <CustomButton to="/sobre/#sobremim">Sobre Mim</CustomButton>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <CustomButton to="/projeto2">Sobre PretaLab</CustomButton>
+            <CustomButton to="/sobre/pretalab">Sobre PretaLab</CustomButton>
           </MenuItem>
           {/* Adicione mais projetos conforme necessário */}
         </Menu>

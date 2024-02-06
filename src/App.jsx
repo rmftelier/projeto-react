@@ -1,6 +1,6 @@
 import { Stack, ThemeProvider } from "@mui/material";
 import { Footer, Header } from "./components";
-import { PaginaInicial, Pokedex } from './pages';
+import { PaginaInicial, Pokedex, SobreMim, SobrePretaLab } from './pages';
 import { Route, Routes } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './components/theme'
@@ -11,6 +11,8 @@ const Rotas = () => {
     <Routes>
       <Route path="/" element={<PaginaInicial />} />
       <Route path="/projetos" element={<Pokedex />} />
+      <Route path="/sobremim" element={<SobreMim />} />
+      <Route path="/sobrepretalab" element={<SobrePretaLab />} />
     </Routes>
   );
 }
