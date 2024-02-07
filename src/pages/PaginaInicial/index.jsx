@@ -1,5 +1,4 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
-import { Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Intro = () => {
@@ -13,7 +12,6 @@ const Intro = () => {
           backgroundColor: "rgba(221, 89, 157, 0.17)",
           padding: "3rem",
           gap: "70px",
-          borderBottom: "1px solid #000",
           paddingBottom: "3rem",
           paddingLeft: "2rem",
           paddingTop: "2rem",
@@ -25,24 +23,37 @@ const Intro = () => {
           <Typography variant="h1">Roberta Meyrelles</Typography>
 
           <Typography variant="h4">
-            Capixaba, Bacharelanda em Ciência da Computação e
-            Desenvolvedora Front-End.
+            Sou <strong>capixaba</strong>, Bacharelanda em Ciência da Computação e aspirante a desenvolvedora front-end.
+            Atualmente, estou me dedicando aos estudos de {" "}
+            <span style={{ textDecoration: "underline #b71b52" }}>front-end</span> e{" "}
+            <span style={{ textDecoration: "underline #b71b52" }}>acessibilidade na web</span>.
           </Typography>
 
           <Typography
             sx={{
               '& a': {
                 color: 'inherit',
-                borderBottom: '2px solid transparent',
-                transition: 'border-bottom 0.3s ease-in-out',
-                '&:hover': {
-                  borderBottom: '2px solid #000',
+                textDecoration: 'none', // Remover a decoração padrão
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  left: 0,
+                  bottom: -2, // Ajuste para a linha estar abaixo do texto
+                  width: '100%',
+                  height: 2,
+                  backgroundColor: 'rgba(221, 89, 157, 0)', // Cor transparente por padrão
+                  transition: 'background-color 0.3s ease-in-out', // Transição suave
+                },
+                '&:hover::after': {
+                  backgroundColor: 'rgba(221, 89, 157, 0.5)', // Cor rosa quando passar o mouse
                 },
               },
             }}
             variant="h4"
           >
-            <Link component={RouterLink} to="/sobreMim">Sobre mim</Link> / <Link component={RouterLink} to="/sobrePretaLab">Sobre PretaLab</Link>
+            <RouterLink to="sobre/mim">Sobre mim</RouterLink> /
+            <RouterLink to="/sobre/preta-lab"> Sobre PretaLab</RouterLink>
           </Typography>
         </Stack>
         <Avatar
@@ -56,24 +67,4 @@ const Intro = () => {
   );
 }
 
-
-const PaginaInicial = () => {
-  return (
-    <Stack direction="row">
-      <Box
-        sx={{
-          flex: 1,
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Intro />
-
-      </Box>
-    </Stack>
-  );
-};
-
-export default PaginaInicial;
-
+export default Intro;

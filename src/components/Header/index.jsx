@@ -77,10 +77,10 @@ const Header = () => {
           }}
         >
           <MenuItem onClick={handleClose} >
-            <CustomButton to="/sobre/#sobremim">Sobre Mim</CustomButton>
+            <CustomButton to="sobre/mim">Sobre Mim</CustomButton>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-            <CustomButton to="/sobre/pretalab">Sobre PretaLab</CustomButton>
+            <CustomButton to="sobre/preta-lab">Sobre PretaLab</CustomButton>
           </MenuItem>
           {/* Adicione mais projetos conforme necessário */}
         </Menu>

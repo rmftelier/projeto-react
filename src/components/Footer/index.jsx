@@ -1,7 +1,5 @@
-//import { Box,  } from "@mui/material";
 import { Stack, Link, Box } from "@mui/material";
 
-//dá pra criar um componente sobre se for usar em algum outro lugar
 const LinkCustomizado = ({ href, label }) => {
   return (
     <Link
@@ -9,11 +7,13 @@ const LinkCustomizado = ({ href, label }) => {
       underline="none"
       sx={{
         color: "#000",
-        fontFamily: "allenoire",
-        fontWeight: "600",
+        fontFamily: "Playfair Display",
+        fontWeight: "700",
         borderBottom: "0.15rem solid #000",
         position: "relative",
       }}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {label}
     </Link>
@@ -36,8 +36,8 @@ const RedesSociais = () => {
     >
       <LinkCustomizado href="https://github.com/rmftelier" label="Github" />
       <LinkCustomizado href="https://www.linkedin.com/in/robertameyrelles/" label="Linkedin" />
-      <LinkCustomizado href="#" label="Dev.to" />
-      <LinkCustomizado href="#" label="E-mail" />
+      <LinkCustomizado href="https://dev.to/asulside" label="Dev.to" />
+      <LinkCustomizado href="mailto:meyfran12@gmail.com" label="E-mail" />
     </Stack>
   );
 };
@@ -69,7 +69,7 @@ const Footer = () => {
         bottom: 0,
         width: "100%",
       }}
-      
+
       >
         <RedesSociais />
         <Creditos />
