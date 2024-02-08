@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Box, Typography, Button, Grid, Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { SubTitulo } from "../../components";
 
 const ProjectCard = ({ title, description, link }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -88,9 +89,10 @@ const Projetos = () => {
           padding: "60px",
           borderTop: "1px solid #000",
           height: "100vh",
+          flexDirection: "column"
         }}
       >
-        <Typography variant="h1">Projetos Desenvolvidos no PretaLab</Typography>
+        <SubTitulo>Projetos Desenvolvidos no PretaLab</SubTitulo>
         <Grid container spacing={2}>
           {projects.map((project, index) => (
             <ProjectCard key={index} title={project.title} description={project.description} link={project.link} />

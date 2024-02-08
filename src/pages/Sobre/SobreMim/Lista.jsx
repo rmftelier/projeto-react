@@ -14,7 +14,7 @@ const Caixa = ({ children }) => {
         border: "1px solid #000",
         fontWeight: "600",
         fontFamily: "Lato",
-        fontSize: "1rem"
+        fontSize: "1.1rem"
       }}
     >
       {children}

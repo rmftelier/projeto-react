@@ -1,6 +1,6 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from 'react-router-dom';
-import { Titulo } from "../../components";
+import { Titulo, Biografia } from "../../components";
 
 const Intro = () => {
   return (
@@ -13,9 +13,6 @@ const Intro = () => {
           backgroundColor: "rgba(221, 89, 157, 0.17)",
           padding: "3rem",
           gap: "70px",
-          paddingBottom: "3rem",
-          paddingLeft: "2rem",
-          paddingTop: "2rem",
           height: "640px"
         }}
       >
@@ -23,12 +20,12 @@ const Intro = () => {
         <Stack sx={{ maxWidth: "95%" }}>
           <Titulo>Roberta Meyrelles</Titulo>
 
-          <Typography variant="h4">
+          <Biografia>
             Sou <strong>capixaba</strong>, Bacharelanda em Ciência da Computação e aspirante a desenvolvedora front-end.
             Atualmente, estou me dedicando aos estudos de {" "}
             <span style={{ textDecoration: "underline #b71b52" }}>front-end</span> e{" "}
             <span style={{ textDecoration: "underline #b71b52" }}>acessibilidade na web</span>.
-          </Typography>
+          </Biografia>
 
           <Typography
             sx={{
