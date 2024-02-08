@@ -7,7 +7,6 @@ const SobreMim = () => {
   return (
     <Container
       boxProps={{
-        backgroundColor: "rgba(163,138,187,0.37)",
         padding: "60px",
         borderTop: "1px solid #000"
       }}
