@@ -11,16 +11,13 @@ const Rotas = () => {
     <Routes>
       <Route path="/" element={<PaginaInicial />} />
       <Route path="/projetos" element={<Projetos />} />
-      <Route path="/sobre">
+      <Route path="/sobre" >
         <Route path="mim" element={<SobreMim />} />
         <Route path="preta-lab" element={<SobrePretaLab />} />
       </Route>
     </Routes>
   );
 }
-
-
-
 
 
 function App() {

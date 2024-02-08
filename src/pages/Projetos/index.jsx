@@ -1,19 +1,53 @@
-import { Box, Typography, Button, Grid } from "@mui/material";
+import { useState } from "react";
+import { Box, Typography, Button, Grid, Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 const ProjectCard = ({ title, description, link }) => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Box sx={{ p: 2, border: 1, borderColor: 'primary.main', borderRadius: 2, textAlign: 'center', backgroundColor: '#e91e63', boxShadow: 5 }}>
-        <Typography variant="h3" sx={{ mb: 2, textAlign: "center", color: '#8b0000' }}>
+      <Box
+        sx={{
+          p: 2,
+          border: 1,
+          borderColor: "#000",
+          borderRadius: 5,
+          textAlign: "center",
+          backgroundColor: "#c28fa0",
+        }}
+      >
+        <Typography variant="h4" sx={{ mb: 2, textAlign: "center", color: "#8b0000" }}>
           {title}
         </Typography>
-        <Typography variant="body1" sx={{ mb: 2, color: '#fff' }}>
+        <Typography variant="body1" sx={{ mb: 2, color: "#fff" }}>
           {description}
         </Typography>
-        <Button component={RouterLink} to={link} variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={handleOpenModal}>
           Ver Projeto
         </Button>
+        <Dialog open={openModal} onClose={handleCloseModal}>
+          <DialogTitle>{title}</DialogTitle>
+          <DialogContent>
+            <Typography variant="body1">{description}</Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button component={RouterLink} to={link} variant="contained" color="secondary" onClick={handleCloseModal}>
+              Ver Detalhes
+            </Button>
+            <Button onClick={handleCloseModal} color="primary">
+              Fechar
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Box>
     </Grid>
   );
@@ -41,20 +75,22 @@ const Projetos = () => {
       description: "Contador simples desenvolvido no PretaLab.",
       link: "/contador",
     },
-    // Adicione mais projetos conforme necessário
   ];
 
   return (
     <section>
-      <Box sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "rgba(221, 89, 157, 0.17)",
-        padding: "60px",
-        borderTop: "1px solid #000",
-        height: "700px"
-      }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "rgba(221, 89, 157, 0.17)",
+          padding: "60px",
+          borderTop: "1px solid #000",
+          height: "100vh",
+        }}
+      >
+        <Typography variant="h1">Projetos Desenvolvidos no PretaLab</Typography>
         <Grid container spacing={2}>
           {projects.map((project, index) => (
             <ProjectCard key={index} title={project.title} description={project.description} link={project.link} />

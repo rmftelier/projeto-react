@@ -3,8 +3,11 @@ import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    secondary: {
+    main: {
       fontFamily: "Lato"
+    },
+    secondary: {
+      fontFamily: "Playfair Display"
     },
     h1: {
       fontFamily: "Playfair Display",
@@ -55,7 +58,8 @@ const theme = createTheme({
       "@global": {
         "*": {
           margin: 0,
-          boxSizing: "border-box"
+          boxSizing: "border-box",
+          fontFamily: "Lato"
         }
       }
     }

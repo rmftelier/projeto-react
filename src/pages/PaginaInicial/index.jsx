@@ -1,5 +1,6 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from 'react-router-dom';
+import { Titulo } from "../../components";
 
 const Intro = () => {
   return (
@@ -20,7 +21,7 @@ const Intro = () => {
       >
 
         <Stack sx={{ maxWidth: "95%" }}>
-          <Typography variant="h1">Roberta Meyrelles</Typography>
+          <Titulo>Roberta Meyrelles</Titulo>
 
           <Typography variant="h4">
             Sou <strong>capixaba</strong>, Bacharelanda em Ciência da Computação e aspirante a desenvolvedora front-end.
@@ -52,7 +53,7 @@ const Intro = () => {
             }}
             variant="h4"
           >
-            <RouterLink to="sobre/mim">Sobre mim</RouterLink> /
+            <RouterLink to="/sobre/mim">Sobre mim</RouterLink> /
             <RouterLink to="/sobre/preta-lab"> Sobre PretaLab</RouterLink>
           </Typography>
         </Stack>
