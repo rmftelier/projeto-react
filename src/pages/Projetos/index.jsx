@@ -18,21 +18,45 @@ const ProjectCard = ({ title, description, link }) => {
     <Grid item xs={12} sm={6} md={4}>
       <Box
         sx={{
-          p: 2,
+          p: 4,
           border: 2,
           borderColor: "#000",
-
           textAlign: "center",
           backgroundColor: "#d6aab6",
+          display: "flex",
+          flexDirection: "column"
         }}
       >
-        <Typography variant="h4" sx={{ mb: 2, textAlign: "center", color: "#8b0000" }}>
+        <Typography
+          sx={{
+            mb: 2,
+            textAlign: "center",
+            fontWeight: "800",
+            fontSize: "1.5rem",
+            fontFamily: "Lato"
+          }}>
           {title}
         </Typography>
-        <Typography variant="body1" sx={{ mb: 2, color: "#000000" }}>
+        <Typography
+          sx={{
+            mb: 2,
+            color: "#000000",
+            fontSize: "1.2rem"
+          }}
+          variant="main"
+        >
           {description}
         </Typography>
-        <Button variant="contained" color="secondary" onClick={handleOpenModal}>
+        <Button variant="contained"
+          sx={{
+            backgroundColor: "rgba(160, 37, 101, 0.638)", color: "#000", fontSize: "1rem", fontWeight: "700", fontFamily: 'Lato, sans-serif', weight: "120px", '&:hover': {
+              backgroundColor: "rgba(150, 93, 203, 0.803)", // Mudar para a cor roxa clara quando hover
+            },
+          }}
+          size="medium"
+          onClick={handleOpenModal}
+
+        >
           Ver Projeto
         </Button>
         <Dialog open={openModal} onClose={handleCloseModal}>
@@ -90,11 +114,15 @@ const Projetos = () => {
       }}
     >
       <SubTitulo>Projetos Desenvolvidos no PretaLab</SubTitulo>
-      <Grid container spacing={2}>
+      <Box sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "40px"
+      }}>
         {projects.map((project, index) => (
           <ProjectCard key={index} title={project.title} description={project.description} link={project.link} />
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 };

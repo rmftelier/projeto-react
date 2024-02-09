@@ -9,7 +9,6 @@ export const Container = ({ children, boxProps, stackProps }) => (
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "rgba(163,138,187,0.37)",
-
         ...boxProps
       }}
     >

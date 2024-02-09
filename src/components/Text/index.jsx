@@ -20,7 +20,6 @@ export const Titulo = ({ children }) => (
     fontSize="6rem"
     textShadow="4px 3px 0px #b71b52"
     maxWidth="10ch"
-
   >
     {children}
   </TipografiaTitulo>
