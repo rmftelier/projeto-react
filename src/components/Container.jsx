@@ -1,8 +1,8 @@
 import { Box, Stack } from "@mui/material";
 
 
-export const Container = ({ children, boxProps, stackProps }) => (
-  <section>
+export const Container = ({ children, boxProps, stackProps, id }) => (
+  <section id={id}>
     <Box
       sx={{
         display: "flex",
@@ -19,5 +19,5 @@ export const Container = ({ children, boxProps, stackProps }) => (
         {children}
       </Stack>
     </Box>
-  </section>
+  </section >
 );

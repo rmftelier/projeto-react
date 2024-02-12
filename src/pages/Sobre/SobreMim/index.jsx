@@ -10,10 +10,12 @@ const SobreMim = () => {
         padding: "60px",
         borderTop: "1px solid #000"
       }}
-
+          
       stackProps={{
         maxWidth: "70rem"
       }}
+
+      id="sobreMim"
     >
       <SubTitulo>
         Sobre Mim

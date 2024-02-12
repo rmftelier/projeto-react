@@ -1,8 +1,12 @@
-import { Avatar, Box, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Stack, Typography, Link } from "@mui/material";
 import { Link as RouterLink } from 'react-router-dom';
 import { Titulo, Biografia } from "../../components";
+import { SobreMim } from "../Sobre";
 
 const Intro = () => {
+
+
+
   return (
     <section>
       <Box
@@ -50,7 +54,7 @@ const Intro = () => {
             }}
             variant="h4"
           >
-            <RouterLink to="/sobre/mim">Sobre mim</RouterLink> /
+            <Link href="#sobreMim" >Sobre mim</Link> /
             <RouterLink to="/sobre/preta-lab"> Sobre PretaLab</RouterLink>
           </Typography>
         </Stack>
@@ -61,6 +65,8 @@ const Intro = () => {
           variant="rounded"
         />
       </Box>
+      <SobreMim id="sobreMim" />
+
     </section>
   );
 }

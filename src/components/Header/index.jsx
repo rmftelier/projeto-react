@@ -1,4 +1,4 @@
-import { Button, AppBar, Menu, MenuItem, Toolbar } from "@mui/material";
+import { Button, AppBar, Menu, MenuItem, Toolbar, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -29,6 +29,14 @@ const Header = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleSmoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    handleClose();
   };
 
   return (
@@ -76,13 +84,27 @@ const Header = () => {
             },
           }}
         >
-          <MenuItem onClick={handleClose} >
-            <CustomButton to="sobre/mim">Sobre Mim</CustomButton>
+          <MenuItem onClick={() => handleSmoothScroll("sobreMim")} >
+            <Link
+              component={RouterLink}
+              to="/#sobreMim"
+              sx={{
+                fontFamily: "Lato",
+                color: "#000",
+                fontSize: "1.5rem",
+                fontWeight: "600",
+                textTransform: 'none',
+                textDecoration: "none",
+                padding: "16px 6px"
+              }}
+            >
+              Sobre Mim
+            </Link>
           </MenuItem>
+
           <MenuItem onClick={handleClose}>
             <CustomButton to="sobre/preta-lab">Sobre PretaLab</CustomButton>
           </MenuItem>
-          {/* Adicione mais projetos conforme necessário */}
         </Menu>
       </Toolbar>
     </AppBar>
@@ -90,6 +112,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-

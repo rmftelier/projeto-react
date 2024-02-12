@@ -71,3 +71,14 @@ export const Paragrafo = ({ children }) => (
     {children}
   </TipografiaTextos>
 )
+
+
+export const MiniTitulo = ({ children }) => (
+  <TipografiaTextos
+    fontSize="1.50rem"
+    fontWeight="600"
+  >
+    {children}
+  </TipografiaTextos>
+)
+
