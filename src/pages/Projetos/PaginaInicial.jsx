@@ -68,12 +68,12 @@ const Projetos = () => {
     },
     {
       title: "Consulta de CEP",
-      description: "Um aplicativo para consultar endereços a partir de CEPs.",
+      description: "Consulta de CEP feita através do consumo da Brasil API.",
       link: "/consulta-cep",
     },
     {
       title: "Contador",
-      description: "Contador simples desenvolvido no PretaLab.",
+      description: "Contador simples que utiliza o hook UseState.",
       link: "/contador",
     },
   ];

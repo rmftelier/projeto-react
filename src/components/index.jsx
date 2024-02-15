@@ -4,3 +4,4 @@ export { default as Header } from './Header';
 export * from './Text';
 // eslint-disable-next-line react-refresh/only-export-components
 export * from './Container';
+export { default as Botao } from "./Botao";
