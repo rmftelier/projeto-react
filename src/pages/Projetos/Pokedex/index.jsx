@@ -1,3 +1,6 @@
+
+/* Mexer aqui */
+
 import { Container, SubTitulo } from "../../../components";
 import CardPokemon from "./CardPokemon";
 import axios from "axios";
@@ -7,12 +10,15 @@ import { Grid, Pagination, CircularProgress } from "@mui/material";
 const Pokedex = () => {
   const [referenciasPokemons, setReferenciasPokemons] = useState([]);
   const [listaPokemons, setListaPokemons] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado para rastrear o carregamento
+
+  const [loading, setLoading] = useState(false); // Estado para rastrear o carregamento
+
   const [page, setPage] = useState(1);
   const pokemonsPorPagina = 12; // 4 Pokémons por linha * 3 linhas por página
 
   const pegar100ReferenciasPokemons = async () => {
     try {
+      setLoading(true);
       const resposta = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
       setReferenciasPokemons(resposta.data.results);
     } catch (error) {
@@ -53,6 +59,10 @@ const Pokedex = () => {
     setPage(value);
   };
 
+
+
+
+
   return (
     <Container
       boxProps={{
@@ -79,9 +89,9 @@ const Pokedex = () => {
         ))}
       </Grid>
 
-      {loading && ( // Verifique se o carregamento está em andamento
+      {loading ?? // Verifique se o carregamento está em andamento
         <CircularProgress style={{ margin: "20px" }} size={100} /> // Exibir CircularProgress enquanto carrega
-      )}
+      }
 
       <Pagination
         count={Math.ceil(referenciasPokemons.length / pokemonsPorPagina)}

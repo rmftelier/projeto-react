@@ -57,8 +57,8 @@ const CardProjeto = ({ title, description, link }) => {
 const Projetos = () => {
   const projects = [
     {
-      title: "Lista de Pokemons",
-      description: "Uma lista de Pokemons desenvolvida no PretaLab.",
+      title: "Lista de Pokémons",
+      description: "Lista de Pokémons criada através do consumo da PokeAPI.",
       link: "/lista-pokemons",
     },
     {
