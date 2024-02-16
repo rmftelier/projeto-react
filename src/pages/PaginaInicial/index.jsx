@@ -4,9 +4,6 @@ import { Titulo, Biografia } from "../../components";
 import { SobreMim } from "../Sobre";
 
 const Intro = () => {
-
-
-
   return (
     <section>
       <Box
@@ -20,35 +17,32 @@ const Intro = () => {
           height: "640px"
         }}
       >
-
         <Stack sx={{ maxWidth: "95%" }}>
           <Titulo>Roberta Meyrelles</Titulo>
-
           <Biografia>
             Sou <strong>capixaba</strong>, Bacharelanda em Ciência da Computação e aspirante a desenvolvedora front-end.
             Atualmente, estou me dedicando aos estudos de {" "}
             <span style={{ textDecoration: "underline #b71b52" }}>front-end</span> e{" "}
             <span style={{ textDecoration: "underline #b71b52" }}>acessibilidade na web</span>.
           </Biografia>
-
           <Typography
             sx={{
               '& a': {
                 color: 'inherit',
-                textDecoration: 'none', // Remover a decoração padrão
+                textDecoration: 'none',
                 position: 'relative',
                 '&::after': {
                   content: '""',
                   position: 'absolute',
                   left: 0,
-                  bottom: -2, // Ajuste para a linha estar abaixo do texto
+                  bottom: -2,
                   width: '100%',
                   height: 2,
-                  backgroundColor: 'rgba(221, 89, 157, 0)', // Cor transparente por padrão
-                  transition: 'background-color 0.3s ease-in-out', // Transição suave
+                  backgroundColor: 'rgba(221, 89, 157, 0)',
+                  transition: 'background-color 0.3s ease-in-out',
                 },
                 '&:hover::after': {
-                  backgroundColor: 'rgba(221, 89, 157, 0.5)', // Cor rosa quando passar o mouse
+                  backgroundColor: 'rgba(221, 89, 157, 0.5)',
                 },
               },
             }}
@@ -66,7 +60,6 @@ const Intro = () => {
         />
       </Box>
       <SobreMim id="sobreMim" />
-
     </section>
   );
 }

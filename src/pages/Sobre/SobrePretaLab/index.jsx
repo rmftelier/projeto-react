@@ -52,10 +52,10 @@ const SobrePretaLab = () => {
           <Stack marginBottom={2}>
             <SubSubTitulo>Ciclo Formativo 9</SubSubTitulo>
             <Paragrafo>
-              O Ciclo Formativo Básico em Tecnologia do PretaLab é uma jornada de aprendizagem de 16 semanas, com mais de 124 horas, dedicada a mulheres negras que desejam ingressar na área da tecnologia.
+              <strong>O Ciclo Formativo Básico em Tecnologia do PretaLab</strong> é uma jornada de aprendizagem de 16 semanas, com mais de 124 horas, dedicada a mulheres negras que desejam ingressar na área da tecnologia.
             </Paragrafo>
             <Paragrafo>
-              Durante esse período, são explorados conceitos e práticas em HTML5, CSS3, JavaScript e React, além de encontros com a psicóloga da equipe para desenvolvimento de habilidades sutis em um ambiente seguro e acolhedor.
+              Durante esse período, são explorados conceitos e práticas em <strong>HTML5, CSS3, JavaScript e React</strong>, além de encontros com a psicóloga da equipe para desenvolvimento de habilidades sutis em um ambiente seguro e acolhedor.
             </Paragrafo>
             <Paragrafo>
               A metodologia da PretaLab, baseada em Autoconhecimento, Desenvolvimento Técnico e Autogestão, é aplicada para potencializar a aprendizagem das novas tecnologistas.

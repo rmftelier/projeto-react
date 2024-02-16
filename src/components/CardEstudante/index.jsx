@@ -14,7 +14,7 @@ const CardEstudante = ({
       </div>
       <div className="container">
         <SubSubTitulo sx={{ textAlign: "center" }}>{nome}</SubSubTitulo>
-        <hr /> {/* Divider entre o nome e as informações */}
+        <hr />
         <p>
           <b>Comida que não gosta: </b>
           {comidaQueNaoGosta}

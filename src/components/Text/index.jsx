@@ -72,7 +72,6 @@ export const Paragrafo = ({ children }) => (
   </TipografiaTextos>
 )
 
-
 export const MiniTitulo = ({ children }) => (
   <TipografiaTextos
     fontSize="1.50rem"

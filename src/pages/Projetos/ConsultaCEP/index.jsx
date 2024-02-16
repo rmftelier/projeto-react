@@ -80,8 +80,7 @@ const ConsultaCEP = () => {
                 value={cep}
                 onChange={(event) => setCep(event.target.value)}
                 helperText="Apenas os números do CEP são necessários."
-
-                FormHelperTextProps={{ sx: { fontSize: '1rem' } }} // Define o tamanho do texto do helperText              
+                FormHelperTextProps={{ sx: { fontSize: '1rem' } }}
               />
               <Button
                 variant="contained"
@@ -89,7 +88,6 @@ const ConsultaCEP = () => {
                   backgroundColor: "rgba(160, 37, 101, 0.638)",
                   fontFamily: "Lato",
                 }}
-
                 onClick={() => consultarCEP()}
               >
                 Buscar

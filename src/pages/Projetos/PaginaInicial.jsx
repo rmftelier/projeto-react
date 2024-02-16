@@ -39,8 +39,13 @@ const CardProjeto = ({ title, description, link }) => {
         </Typography>
         <Button variant="contained"
           sx={{
-            backgroundColor: "rgba(160, 37, 101, 0.638)", color: "#000", fontSize: "1rem", fontWeight: "700", fontFamily: 'Lato, sans-serif', weight: "120px", '&:hover': {
-              backgroundColor: "rgba(150, 93, 203, 0.803)", // Mudar para a cor roxa clara quando hover
+            backgroundColor: "rgba(160, 37, 101, 0.638)", color: "#000",
+            fontSize: "1rem",
+            fontWeight: "700",
+            fontFamily: 'Lato, sans-serif',
+            weight: "120px",
+            '&:hover': {
+              backgroundColor: "rgba(150, 93, 203, 0.803)"
             },
           }}
           size="medium"
@@ -55,25 +60,25 @@ const CardProjeto = ({ title, description, link }) => {
 };
 
 const Projetos = () => {
-  const projects = [
+  const projetos = [
     {
-      title: "Lista de Pokémons",
-      description: "Lista de Pokémons criada através do consumo da PokeAPI.",
+      titulo: "Lista de Pokémons",
+      descricao: "Lista de Pokémons criada através do consumo da PokeAPI.",
       link: "/lista-pokemons",
     },
     {
-      title: "Lista de Estudantes",
-      description: "Uma lista de estudantes desenvolvida no PretaLab. Utilizamos LocalStorage, useEffect e useState.",
+      titulo: "Lista de Estudantes",
+      descricao: "Uma lista de estudantes desenvolvida no PretaLab. Utilizamos LocalStorage, useEffect e useState.",
       link: "/lista-estudantes",
     },
     {
-      title: "Consulta de CEP",
-      description: "Consulta de CEP feita através do consumo da Brasil API.",
+      titulo: "Consulta de CEP",
+      descricao: "Consulta de CEP feita através do consumo da Brasil API.",
       link: "/consulta-cep",
     },
     {
-      title: "Contador",
-      description: "Contador simples que utiliza o hook UseState.",
+      titulo: "Contador",
+      descricao: "Contador simples que utiliza o hook UseState.",
       link: "/contador",
     },
   ];
@@ -95,8 +100,8 @@ const Projetos = () => {
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "40px"
       }}>
-        {projects.map((project, index) => (
-          <CardProjeto key={index} title={project.title} description={project.description} link={project.link} />
+        {projetos.map((projeto, index) => (
+          <CardProjeto key={index} title={projeto.titulo} description={projeto.descricao} link={projeto.link} />
         ))}
       </Box>
     </Container>

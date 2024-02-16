@@ -1,7 +1,6 @@
 import { List, ListItem } from "@mui/material";
 import ListaTecnologias from "./Lista";
-import { Paragrafo, SubSubTitulo, SubTitulo } from "../../../components";
-import { Container } from "../../../components";
+import { Paragrafo, SubSubTitulo, SubTitulo, Container } from "../../../components";
 
 const SobreMim = () => {
   return (
@@ -10,11 +9,9 @@ const SobreMim = () => {
         padding: "60px",
         borderTop: "1px solid #000"
       }}
-          
       stackProps={{
         maxWidth: "70rem"
       }}
-
       id="sobreMim"
     >
       <SubTitulo>
@@ -28,9 +25,9 @@ const SobreMim = () => {
       </Paragrafo>
       <Paragrafo>
         Particularmente sou interessada em Desenvolvimento Front-End, área
-        que estudo e pratico no estágio e paralelamente aos estudos da graduação.
-        Principalmente sobre acessibilidade na web e a construção de protótipos e websites user-friendly.
-        E tecnologias e abordagens que tratem sobre tecnologia ética, questões raciais e diversidade na área
+        que estudo e pratico no estágio e paralelamente aos estudos da graduação. Estudo
+        principalmente sobre acessibilidade na web e a construção de protótipos e websites user-friendly.
+        Também sobre tecnologias e abordagens que tratem sobre tecnologia ética, questões raciais e diversidade na área
         tecnológica.
       </Paragrafo>
       <Paragrafo>

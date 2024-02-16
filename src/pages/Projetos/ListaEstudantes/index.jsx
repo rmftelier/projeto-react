@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Formulario, ListaDeEstudantes, SubTitulo, Container } from "../../../components";
 import { estudantes } from "../../../data/estudantes";
 
-
 const ListaEstudantes = () => {
   const listaStorage = localStorage.getItem("estudantes");
   const [lista, setLista] = useState(JSON.parse(listaStorage) || estudantes);
@@ -12,7 +11,7 @@ const ListaEstudantes = () => {
     if (listaStorage) {
       setLista(JSON.parse(listaStorage));
     }
-  }, []);
+  }, [listaStorage]);
 
   // onUpdate
   useEffect(() => {

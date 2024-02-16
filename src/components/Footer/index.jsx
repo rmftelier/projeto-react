@@ -45,12 +45,10 @@ const Footer = () => {
   return (
     <footer>
       <Box sx={{
-
         textAlign: "center",
         bottom: 0,
         width: "100%",
       }}
-
       >
         <RedesSociais />
         <Creditos />

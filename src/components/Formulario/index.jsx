@@ -74,7 +74,7 @@ const Formulario = ({ lista, setLista }) => {
           </Stack>
         </form >
       </Paper>
-    </Box >
+    </Box>
   );
 };
 

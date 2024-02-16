@@ -22,7 +22,6 @@ const Caixa = ({ children }) => {
   );
 };
 
-
 const ListaTecnologias = () => {
   return (
     <List sx={{ display: 'flex', gap: '2px', }}>

@@ -13,7 +13,6 @@ import { Route, Routes } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './components/theme'
 
-
 const Rotas = () => {
   return (
     <Routes>
@@ -29,7 +28,6 @@ const Rotas = () => {
     </Routes>
   );
 }
-
 
 function App() {
   return (

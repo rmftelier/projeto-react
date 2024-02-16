@@ -80,7 +80,7 @@ const Header = () => {
               borderRadius: "0",
               backgroundColor: 'rgba(163, 138, 187, 0.37)',
               boxShadow: "0",
-              zIndex: 1, // Defina a cor de fundo desejada aqui
+              zIndex: 1
             },
           }}
         >

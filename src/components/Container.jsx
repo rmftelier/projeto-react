@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 
-
 export const Container = ({ children, boxProps, stackProps, id }) => (
   <section id={id}>
     <Box
