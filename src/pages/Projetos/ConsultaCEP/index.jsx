@@ -45,7 +45,6 @@ const ConsultaCEP = () => {
         height: "100%"
       }}
       stackProps={{
-        maxWidth: "70rem",
         alignItems: "center"
       }}
     >
