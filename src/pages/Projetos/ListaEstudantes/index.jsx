@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Formulario from "../../../components/Formulario";
-import ListaDeEstudantes from "../../../components/ListaDeEstudantes";
+import { Formulario, ListaDeEstudantes, SubTitulo, Container } from "../../../components";
 import { estudantes } from "../../../data/estudantes";
+
 
 const ListaEstudantes = () => {
   const listaStorage = localStorage.getItem("estudantes");
@@ -20,10 +20,21 @@ const ListaEstudantes = () => {
   }, [lista]);
 
   return (
-    <>
+    <Container
+      boxProps={{
+        padding: "60px",
+        borderTop: "1px solid #000",
+        height: "100%"
+      }}
+      stackProps={{
+        alignItems: "center",
+        gap: "20px"
+      }}
+    >
+      <SubTitulo>Referências Negras</SubTitulo>
       <Formulario setLista={setLista} lista={lista} />
       <ListaDeEstudantes lista={lista} />
-    </>
+    </Container>
   );
 };
 

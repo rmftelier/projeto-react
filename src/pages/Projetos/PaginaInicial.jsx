@@ -63,7 +63,7 @@ const Projetos = () => {
     },
     {
       title: "Lista de Estudantes",
-      description: "Uma lista de estudantes desenvolvida no PretaLab.",
+      description: "Uma lista de estudantes desenvolvida no PretaLab. Utilizamos LocalStorage, useEffect e useState.",
       link: "/lista-estudantes",
     },
     {

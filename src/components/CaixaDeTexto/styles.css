@@ -5,14 +5,16 @@
 .campo-texto label {
   display: block;
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Lato";
 }
 
 .campo-texto input {
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px;
   border: 1px #000 solid;
   border-radius: 8px;
   background-color: #fff;
-  width: 100%
+  width: 100%;
+  font-family: "Lato";
 }

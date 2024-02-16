@@ -1,3 +1,4 @@
+import { SubSubTitulo } from "../Text";
 import "./styles.css";
 
 const CardEstudante = ({
@@ -8,18 +9,19 @@ const CardEstudante = ({
 }) => {
   return (
     <div className="card">
-      <img src={fotoUrl} alt="foto da estudante" />
-
+      <div className="image-container">
+        <img src={fotoUrl} alt="foto da estudante" />
+      </div>
       <div className="container">
-        <h4>{nome}</h4>
-
+        <SubSubTitulo sx={{ textAlign: "center" }}>{nome}</SubSubTitulo>
+        <hr /> {/* Divider entre o nome e as informações */}
         <p>
           <b>Comida que não gosta: </b>
           {comidaQueNaoGosta}
         </p>
-
+        <hr />
         <p>
-          <b>Uma experiência muito massa:</b>
+          <b>Experiência muito massa:</b>
           {experienciaPositiva}
         </p>
       </div>

@@ -9,3 +9,4 @@ export { default as CaixaDeTexto } from "./CaixaDeTexto";
 export { default as CardEstudante } from "./CardEstudante";
 export { default as Formulario } from './Formulario';
 export { default as ListaDeEstudantes } from './ListaDeEstudantes';
+export { default as LinkCustomizado } from './LinkCustomizado';
