@@ -79,7 +79,7 @@ const Pokedex = () => {
         <Box >
           <Grid container spacing={2}>
             {listaPokemons.map((pokemon) => (
-              <Grid item key={pokemon.id} xs={6} sm={3} >
+              <Grid item key={pokemon.id} xs={6} md={4} sm={3} >
                 <CardPokemon
                   nome={pokemon.name}
                   foto={pokemon.sprites.front_default}
