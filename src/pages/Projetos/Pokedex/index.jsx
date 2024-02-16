@@ -76,7 +76,9 @@ const Pokedex = () => {
           <LinearProgress />
         </Box>
       ) : (
-        <Box >
+        <Box boxProps={{
+          padding: "60px"
+        }}>
           <Grid container spacing={2}>
             {listaPokemons.map((pokemon) => (
               <Grid item key={pokemon.id} xs={6} md={4} sm={3} >
